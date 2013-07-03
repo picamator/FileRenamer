@@ -22,12 +22,18 @@ Examples.
 
 	php frcon.php -l
 
-3. Help can be found bu using such command:
+
+3. Help can be found by using such command:
 
 	php frcon.php -h
-or
 
+
+or
 	php frcon.php
+
+
+
+
 
 
  
