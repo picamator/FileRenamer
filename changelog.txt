@@ -1,0 +1,3 @@
+2013-07-03 Version 0.8.0
+
++ Application added on GitHub.
