@@ -15,21 +15,16 @@ Report file helps constract new links for original application.
 Examples.
 1. For renaming files in the examples directory please run console command:
 
-	php frcon.php -s docs/examples -r mtime
-
+	<code>php frcon.php -s docs/examples -r mtime</code>
 
 2. To see all registered strategies please run:
 
-	php frcon.php -l
-
+	<code>php frcon.php -l</code>
 
 3. Help can be found by using such command:
 
-	php frcon.php -h
+	<code>php frcon.php -h</code>
 
-
-or
-	php frcon.php
 
 
 
