@@ -43,12 +43,12 @@ class StrReplace extends \FileRenamer\Strategy\AbstractStrategy
      * Gets Replace Pair
      * 
      * @return array
-     * @throws FileRenamer\GeneralException 
+     * @throws \FileRenamer\GeneralException 
      */
     protected function getReplacePair()
     {
         if(empty($this->replace_pair)) {
-            throw new FileRenamer\GeneralException('Error: Replace Pair does not set. Please set Replace Pair and try agan.');
+            throw new \FileRenamer\GeneralException('Error: Replace Pair does not set. Please set Replace Pair and try agan.');
         }
         
         return $this->replace_pair;

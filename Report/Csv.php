@@ -34,16 +34,16 @@ class Csv implements ReportInterface
     protected $report_path;
     
     /**
-     * @throws FileRenamer\GeneralException
+     * @throws \FileRenamer\GeneralException
      */
     public function __construct()
     {
         if(!file_exists(self::PATH) && !@mkdir(self::PATH, 0777, true)) {
-            throw new FileRenamer\GeneralException('Error: Report directory "'.self::PATH.'" can not be created. Probaply not enough permision for creating directory.');
+            throw new \FileRenamer\GeneralException('Error: Report directory "'.self::PATH.'" can not be created. Probaply not enough permision for creating directory.');
         }
         
         if(!is_writable(self::PATH)) {
-            throw new FileRenamer\GeneralException('Error: Report directory "'.self::PATH.'" does not have write permission. Please add write permision.');
+            throw new \FileRenamer\GeneralException('Error: Report directory "'.self::PATH.'" does not have write permission. Please add write permision.');
         }
 
         $this->report_path  = self::PATH.'report_'.date('Y_m_d_H_i_s').'.csv';
