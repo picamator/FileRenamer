@@ -5,7 +5,7 @@ FileRenamer based on:
 - providing ability registry new strategies
 - creating process report in .csv format
 - safety algorithm without removing source files. New directory with renamed files will be created.
-- implements architecture Patters
+- implements architecture Patterns
 - PHP 5.3
 
 Area of usage.
