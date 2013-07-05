@@ -1,3 +1,6 @@
-2013-07-03 Version 1.0.0
+2013-07-04 Version 1.0.0
 + Console FileRenamer
 + Ukrainian, Russian, Hungarian, Translit, Microtime strategies
+
+2013-07-05 Version 1.0.1
+* Updated autoload algorithm when root folder is not named as FileRenamer
