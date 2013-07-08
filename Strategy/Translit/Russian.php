@@ -1,15 +1,15 @@
 <?php
 /**
- * Strategy Replace Russian
- * Rename strategy based transliteration Russian to Latin
+ * Translit Russian
+ * Rename strategy based on transliteration Russian to Latin
  *  
  * @link        https://github.com/picamator/FileRenamer
  * @license     http://opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace FileRenamer\Strategy\Replace;
+namespace FileRenamer\Strategy\Translit;
 
-class Russian extends StrReplace
+class Russian extends \FileRenamer\Strategy\StrReplace
 {    
      protected $replace_pair = array(
         'а' => 'a',  'б' => 'b',  'в' => 'v',   'г' => 'g', 'д' => 'd', 'e' => 'e',

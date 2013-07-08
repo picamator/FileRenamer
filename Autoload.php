@@ -10,7 +10,7 @@ namespace FileRenamer;
 
 function Autoload($class)
 {   
-    $class = str_replace('FileRenamer', '.', $class);
+    $class = str_replace(__NAMESPACE__, '.', $class);
     
     include_once (str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php');
 }

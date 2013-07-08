@@ -1,14 +1,15 @@
 <?php
 /**
- * Translit Strategy
+ * General Translit
+ * Without taking into account language specifics
  *  
  * @link        https://github.com/picamator/FileRenamer
  * @license     http://opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace FileRenamer\Strategy;
+namespace FileRenamer\Strategy\Translit;
 
-class Translit extends AbstractStrategy
+class General extends \FileRenamer\Strategy\AbstractStrategy
 {
     /**
      * Gets New File Name

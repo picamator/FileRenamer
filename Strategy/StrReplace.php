@@ -7,9 +7,9 @@
  * @license     http://opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace FileRenamer\Strategy\Replace;
+namespace FileRenamer\Strategy;
 
-class StrReplace extends \FileRenamer\Strategy\AbstractStrategy
+class StrReplace extends AbstractStrategy
 {
     protected $replace_pair = array();
     
