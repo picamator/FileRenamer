@@ -22,7 +22,7 @@ Examples
 --------
 1. For renaming files in the examples directory please run console command:
 ```
-	php frcon.php -s docs/examples -r mtime
+    php frcon.php -s tests/data/RenameMe -r mtime 
 ```	
 2. To see all registered strategies please run:
 ```
