@@ -1,5 +1,11 @@
 CHANGELOG
 =========
+v1.2.0 (2013-09-29)
+-------------------
++ Generated PHP documentation
++ UnitTest
+* Set file name changelog, license and readme to upper case
+
 
 v1.1.0 (2013-07-10)
 -------------------
