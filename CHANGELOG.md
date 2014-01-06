@@ -1,5 +1,10 @@
 CHANGELOG
 =========
+v1.3.0 (2014-01-06)
+-------------------
+* Updated Autoload
+* Changed project folder structure
+
 v1.2.0 (2013-09-29)
 -------------------
 + Generated PHP documentation

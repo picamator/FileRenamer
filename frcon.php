@@ -6,10 +6,10 @@
  * @license     http://opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-$path = realpath('../');
-set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+namespace FileRenamer;
 
-include_once('Autoload.php');
+// Autoload
+include_once('./src/Autoload.php');
 
 // identifing options
 $shortopts  = '';
@@ -23,5 +23,5 @@ $shortopts .= 'h';   // help
 $strategies = parse_ini_file('configs/strategies.ini', true);
 $options    = getopt($shortopts);
 
-$console    = new FileRenamer\Console($options, $strategies);
+$console    = new Console($options, $strategies);
 $console->run();

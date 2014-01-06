@@ -17,11 +17,6 @@
         <template name="zend" />
     </transformations>
   <files>
-    <directory>.</directory>
-    <ignore>configs/*</ignore>
-    <ignore>data/*</ignore>
-    <ignore>docs/*</ignore>
-    <ignore>scripts/*</ignore>
-    <ignore>tests/*</ignore>
+    <directory>./src</directory>
   </files>
 </phpdoc>

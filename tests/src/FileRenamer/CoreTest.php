@@ -7,6 +7,7 @@
  */
 
 namespace FileRenamer;
+use FileRenamer\Strategy\Translit;
 
 class CoreTest extends BaseTest
 {
@@ -60,12 +61,12 @@ class CoreTest extends BaseTest
         return array(
             array(new Strategy\Hash),
             array(new Strategy\Microtime),
-            array(new Strategy\Translit\General),
-            array(new Strategy\Translit\Ukrainian),
-            array(new Strategy\Translit\Russian),
-            array(new Strategy\Translit\Hungarian),
-            array(new Strategy\Translit\Portuguese),
-            array(new Strategy\Translit\German)
+            array(new Translit\General),
+            array(new Translit\Ukrainian),
+            array(new Translit\Russian),
+            array(new Translit\Hungarian),
+            array(new Translit\Portuguese),
+            array(new Translit\German)
         );
     }
 }
