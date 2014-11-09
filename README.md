@@ -11,7 +11,6 @@ FileRenamer is:
 * provided ability registry new strategies
 * created process report in .csv format
 * implemented safety algorithm without removing source files. New directory with renamed files will be created.
-* followed architecture Patterns
 
 Requirements
 ------------
@@ -19,15 +18,17 @@ Requirements
 
 Usage
 -----
-1. For renaming files in the examples directory please run console command:
+For renaming files in the examples directory please run console command:
 ```
     php frcon.php -s test/data/RenameMe -r mtime 
 ```	
-2. To see all registered strategies please run:
+
+To see all registered strategies please run:
 ```
 	php frcon.php -l
 ```
-3. Help can be found by using such command:
+
+Help can be found by using such command:
 ```
 	php frcon.php -h
 ```	
