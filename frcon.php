@@ -9,7 +9,7 @@
 namespace FileRenamer;
 
 // Autoload
-include_once('./src/Autoload.php');
+include_once('./src/autoload.php');
 
 // identifing options
 $shortopts  = '';
@@ -20,7 +20,7 @@ $shortopts .= 'd::'; // destination path
 $shortopts .= 'h';   // help   
 
 // run
-$strategies = parse_ini_file('configs/strategies.ini', true);
+$strategies = parse_ini_file('config/strategies.ini', true);
 $options    = getopt($shortopts);
 
 $console    = new Console($options, $strategies);

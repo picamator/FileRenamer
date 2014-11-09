@@ -6,8 +6,17 @@
  * @license     http://opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace FileRenamer;
-use FileRenamer\Strategy\Translit;
+use FileRenamer\Core;
+use FileRenamer\Report\Csv;
+use FileRenamer\Strategy\StrategyInterface;
+use FileRenamer\Strategy\Hash;
+use FileRenamer\Strategy\Microtime;
+use FileRenamer\Strategy\Translit\General;
+use FileRenamer\Strategy\Translit\Ukrainian;
+use FileRenamer\Strategy\Translit\Russian;
+use FileRenamer\Strategy\Translit\Hungarian;
+use FileRenamer\Strategy\Translit\Portuguese;
+use FileRenamer\Strategy\Translit\German;
 
 class CoreTest extends BaseTest
 {
@@ -21,7 +30,7 @@ class CoreTest extends BaseTest
     /**
      * Report
      * 
-     * @var Report\Csv 
+     * @var Csv 
      */
     protected $report;
     
@@ -32,17 +41,17 @@ class CoreTest extends BaseTest
     {
         parent::setUp();
         
-        $this->source_path = $this->data_path.'RenameMe';
-        $this->report      = new Report\Csv;        
+        $this->source_path = $this->getDataPath('RenameMe');
+        $this->report      = new Csv();        
     }
     
     /**
      * Test for Hash Strategy
      * 
-     * @param Strategy\StrategyInterface $strategy 
+     * @param StrategyInterface $strategy 
      * @dataProvider strategyProvider
      */
-    public function testStrategy(Strategy\StrategyInterface $strategy)
+    public function testStrategy(StrategyInterface $strategy)
     {   
         $core = new Core($this->source_path, $strategy, $this->report);
         $core->run();
@@ -59,14 +68,14 @@ class CoreTest extends BaseTest
     public function strategyProvider()
     {
         return array(
-            array(new Strategy\Hash),
-            array(new Strategy\Microtime),
-            array(new Translit\General),
-            array(new Translit\Ukrainian),
-            array(new Translit\Russian),
-            array(new Translit\Hungarian),
-            array(new Translit\Portuguese),
-            array(new Translit\German)
+            array(new Hash()),
+            array(new Microtime()),
+            array(new General()),
+            array(new Ukrainian()),
+            array(new Russian()),
+            array(new Hungarian()),
+            array(new Portuguese()),
+            array(new German())
         );
     }
 }

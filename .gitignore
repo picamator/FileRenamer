@@ -1,5 +1,5 @@
 *.*~
 /data
-docs/phpdoc
-tests/data/RenameMe_*
-tests/data/report
+doc/phpdoc
+test/data/RenameMe_*
+test/data/report

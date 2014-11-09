@@ -80,12 +80,12 @@ abstract class AbstractStrategy implements StrategyInterface
     /**
      * Sets Original File Extension
      * 
-     * @param string $destination_path
+     * @param string $original_file_extension
      * @return self
      */
     public function setOriginalFileExtension($original_file_extension)
     {
-        $this->original_file_extension = '.'.$original_file_extension;
+        $this->original_file_extension = '.' . $original_file_extension;
         
         return $this;
     }
@@ -99,8 +99,7 @@ abstract class AbstractStrategy implements StrategyInterface
     public function rename()
     {      
         $destination_path   = $this->destination_path.DIRECTORY_SEPARATOR.$this->getNewFileName();
-        $result             = @copy($this->source_path, $destination_path);
-        $result             = (empty($result))? false: $result;
+        $result             = copy($this->source_path, $destination_path);
         
         return array($this->source_path, $destination_path, $result);
     }

@@ -8,6 +8,7 @@
  */
 
 namespace FileRenamer\Strategy;
+use FileRenamer\RuntimeException;
 
 class StrReplace extends AbstractStrategy
 {
@@ -43,12 +44,12 @@ class StrReplace extends AbstractStrategy
      * Gets Replace Pair
      * 
      * @return array
-     * @throws \FileRenamer\GeneralException 
+     * @throws RuntimeException
      */
     protected function getReplacePair()
     {
         if(empty($this->replace_pair)) {
-            throw new \FileRenamer\GeneralException('Error: Replace Pair does not set. Please set Replace Pair and try agan.');
+            throw new RuntimeException('Error: Replace Pair does not set. Please set Replace Pair and try agan.');
         }
         
         return $this->replace_pair;

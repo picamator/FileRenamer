@@ -6,4 +6,4 @@ echo "Generate phpdoc"
 phpdoc
 
 echo "Create phpdoc archive"
-tar -pczf ./docs/phpdoc.tar ./docs/phpdoc/
+tar -pczf ./doc/phpdoc.tar ./doc/phpdoc/

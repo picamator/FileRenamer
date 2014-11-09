@@ -94,14 +94,14 @@ STRATEGY;
      * Displays process result
      * 
      * @return void
-     * @throws GeneralException 
+     * @throws RuntimeException 
      */
     protected function runStrategy()
     {
         $strategy_class = isset($this->strategies[$this->options['r']]['class'])? $this->strategies[$this->options['r']]['class']: null;
         
         if(is_null($strategy_class) || !class_exists($strategy_class)) {
-            throw new GeneralException('Error: Strategy "'.$strategy_class.'" has not found. Please use other strategy or correct configuration.');
+            throw new RuntimeException('Error: Strategy "'.$strategy_class.'" has not found. Please use other strategy or correct configuration.');
         } 
         
         $source_path        = $this->options['s'];

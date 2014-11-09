@@ -115,14 +115,14 @@ class Core
      * 
      * @param string $source_path 
      * @return self
-     * @throws GeneralException
+     * @throws RuntimeException
      */
     protected function setSourcePath($source_path)
     {
         $source_path = trim($source_path);
         
         if(!file_exists($source_path) || !is_readable($source_path)) {
-            throw new GeneralException('Error: Source Path "'.$source_path.'" does not exist or has not read permission. Please set propper Source Path or pemission.');
+            throw new RuntimeException('Error: Source Path "'.$source_path.'" does not exist or has not read permission. Please set propper Source Path or pemission.');
         }
         
         $this->source_path = $source_path;
@@ -134,7 +134,7 @@ class Core
      * Gets Destination Path
      * 
      * @return string 
-     * @throws GeneralException
+     * @throws RuntimeException
      */
     protected function getDestinationPath()
     {
@@ -146,7 +146,7 @@ class Core
         $source_path_parent = dirname($this->source_path);
         
         if(!is_writable($source_path_parent)) {
-            throw new GeneralException('Error: Destination Path "'.$source_path_parent.'" does not have not write permission. Please set other Destination Path or pemission.');
+            throw new RuntimeException('Error: Destination Path "'.$source_path_parent.'" does not have not write permission. Please set other Destination Path or pemission.');
         }
         
         $destination_dir        = $source_path_base.$this->getDestinationPrefix();
@@ -164,6 +164,6 @@ class Core
      */
     protected function getDestinationPrefix()
     {      
-        return $this->destination_prefix.'_'.date('Y_m_d_H_i_s');
+        return $this->destination_prefix . '_' . date('Y_m_d_H_i_s');
     }
 }
